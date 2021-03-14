@@ -1,6 +1,7 @@
 #ifndef NW_CORE_WINDOW_H
 #define NW_CORE_WINDOW_H
 #include <nw_core.hpp>
+#if (defined NW_OS)
 namespace NW
 {
 	/// window_info struct
@@ -29,45 +30,62 @@ namespace NW
 	/// core_window class
 	class NW_API core_window : public a_mem_user
 	{
+		using info = window_info;
+		using handle = window_handle;
+		using keyboard = keyboard_state;
+		using mouse = mouse_state;
 	public:
-		core_window(const window_info& info);
+		core_window(const info& info);
 		core_window(const core_window& copy) = delete;
 		virtual ~core_window();
 		// --getters
-		inline ui16 get_coord_x() const	{ return m_info.coord_x; }
-		inline ui16 get_coord_y() const	{ return m_info.coord_y; }
-		inline ui16 get_size_x() const	{ return m_info.size_x; }
-		inline ui16 get_size_y() const	{ return m_info.size_y; }
-		inline ui16 get_opacity() const	{ return m_info.opacity; }
-		inline cstring get_title() const{ return &m_info.title[0]; }
-		inline window_handle* get_native()	{ return &m_native; }
-		inline const window_info& get_info() const { return m_info; }
+		inline ui16 get_coord_x() const		{ return m_info.coord_x; }
+		inline ui16 get_coord_y() const		{ return m_info.coord_y; }
+		inline ui16 get_size_x() const		{ return m_info.size_x; }
+		inline ui16 get_size_y() const		{ return m_info.size_y; }
+		inline ui16 get_opacity() const		{ return m_info.opacity; }
+		inline cstring get_title() const	{ return &m_info.title[0]; }
+		inline const info& get_info() const	{ return m_info; }
+		inline handle* get_native()					{ return &m_native; }
+		inline const handle* get_native() const		{ return &m_native; }
+		inline const mouse* get_mouse()	const		{ return &m_mouse; }
+		inline const keyboard* get_keyboard() const	{ return &m_kbd; }
 		// --setters
 		void set_title(cstring title);
 		void set_focused(bit is_focused);
 		void set_enabled(bit enable);
+		void set_cursor_enabled(bit enable_cursor);
 		void set_opacity(f32 opacity);
 		void set_icon(const a_image& img);
-		void set_event_callback(const event_callback& event_proc);
+		void set_callback(const event_callback& event_proc);
 		// --predicates
-		inline bit is_hovered() const	{ return m_info.is_hovered; }
-		inline bit  is_focused() const	{ return m_info.is_focused; }
-		inline bit is_enabled() const	{ return m_info.is_enabled; }
+		inline bit is_hovered() const			{ return m_info.is_hovered; }
+		inline bit is_focused() const			{ return m_info.is_focused; }
+		inline bit is_enabled() const			{ return m_info.is_enabled; }
+		inline bit is_cursor_enabled() const	{ return m_mouse.is_cursor_enabled(); }
 		// --operators
 		void operator=(const core_window& copy) = delete;
 		// --core_methods
 		void update();
-#if defined (NW_PLATFORM_WINDOWS)
+#if (NW_OS & NW_OS_WIN)
+		static LRESULT __stdcall event_proc_init(HWND wnd, UINT msg, WPARAM wparam, LPARAM lparam);
+		static LRESULT __stdcall event_proc_static(HWND wnd, UINT msg, WPARAM wparam, LPARAM lparam);
 		LRESULT __stdcall event_proc(HWND wnd, UINT msg, WPARAM wparam, LPARAM lparam);
-#endif	// NW_PLATFORM
+#endif
 	private:
-		window_info m_info;
-		window_handle m_native;
+		info m_info;
+		handle m_native;
+		keyboard m_kbd;
+		mouse m_mouse;
+#if (NW_OS & NW_OS_WIN)
 		MSG m_msg;
 		WNDCLASSEX m_class;
 		PAINTSTRUCT m_pts;
+		darray<sbyte> raw_buf;
+#endif
 	};
 }
+#endif	// NW_OS
 #endif	// NW_CORE_WINDOW_H
 /*
 * Development started 18.10.2020

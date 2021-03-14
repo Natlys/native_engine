@@ -6,28 +6,36 @@
 
 namespace NW
 {
-	a_engine_state::a_engine_state(core_engine& engine) :
+	a_core_state::a_core_state(core_engine& engine) :
 		m_core(&engine) { }
-	a_engine_state::~a_engine_state() { }
+	a_core_state::~a_core_state() { }
 }
 namespace NW
 {
-	game_state::game_state(core_engine& engine) :
-		a_engine_state(engine) { }
-	game_state::~game_state() { }
+	game_core_state::game_core_state(core_engine& engine) :
+		a_core_state(engine) { }
+	game_core_state::~game_core_state() { }
 
 	// --==<core_methods>==--
-	bool game_state::init() { return true; }
-	void game_state::quit() { }
-	void game_state::update() { }
+	bool game_core_state::init() { return true; }
+	void game_core_state::quit() { }
+	void game_core_state::update() { }
 
-	void game_state::event_proc(cursor_event& evt) { }
-	void game_state::event_proc(keyboard_event& evt) { }
-	void game_state::event_proc(window_event& evt) { }
+	void game_core_state::event_proc(mouse_event& evt) { }
+	void game_core_state::event_proc(keyboard_event& evt) { }
+	void game_core_state::event_proc(window_event& evt) { }
 	// --==</core_methods>==--
 }
 namespace NW
 {
+	vtx_2f2f vtx_quad_2f2f[] = {
+		{ { -1.0f,	-1.0f },	{ 0.00f,	0.00f } },
+		{ { -1.0f,	+1.0f },	{ 0.00f,	1.00f } },
+		{ { +1.0f,	+1.0f },	{ 1.00f,	1.00f } },
+		{ { +1.0f,	+1.0f },	{ 1.00f,	1.00f } },
+		{ { +1.0f,	-1.0f },	{ 1.00f,	0.00f } },
+		{ { -1.0f,	-1.0f },	{ 0.00f,	0.00f } },
+	};
 	vtx_3f vtx_cube_3f[] = {
 		{ { -1.0f,  1.0f, -1.0f } },
 		{ { -1.0f, -1.0f, -1.0f } },
@@ -72,97 +80,118 @@ namespace NW
 		{ {  1.0f, -1.0f,  1.0f } },
 	};
 	vtx_3f2f3f vtx_cube_3f2f3f[] = {
-		// back
-		{ { -1.0f,	+1.0f,	-1.0f },	{ 0.00f,	1.00f } },
-		{ { -1.0f,	-1.0f,	-1.0f },	{ 0.00f,	0.00f } },
-		{ { +1.0f,	+1.0f,	-1.0f },	{ 1.00f,	1.00f } },
-		{ { +1.0f,	-1.0f,	-1.0f },	{ 1.00f,	0.00f } },
-		{ { +1.0f,	+1.0f,	-1.0f },	{ 1.00f,	1.00f } },
-		{ { -1.0f,	+1.0f,	-1.0f },	{ 0.00f,	1.00f } },
-		// left
-		{ { -1.0f,	-1.0f,	+1.0f },	{ 0.00f,	1.00f } },
-		{ { -1.0f,	-1.0f,	-1.0f },	{ 0.00f,	0.00f } },
-		{ { -1.0f,	+1.0f,	-1.0f },	{ 1.00f,	0.00f } },
-		{ { -1.0f,	+1.0f,	-1.0f },	{ 1.00f,	0.00f } },
-		{ { -1.0f,	+1.0f,  +1.0f },	{ 1.00f,	1.00f } },
-		{ { -1.0f,	-1.0f,  +1.0f },	{ 0.00f,	1.00f } },
-		// right
-		{ { +1.0f,	-1.0f,	-1.0f },	{ 0.00f,	0.00f } },
-		{ { +1.0f,	-1.0f,	+1.0f },	{ 0.00f,	1.00f } },
-		{ { +1.0f,	+1.0f,	+1.0f },	{ 1.00f,	1.00f } },
-		{ { +1.0f,	+1.0f,	+1.0f },	{ 1.00f,	1.00f } },
-		{ { +1.0f,	+1.0f,	-1.0f },	{ 1.00f,	0.00f } },
-		{ { +1.0f,	-1.0f,	-1.0f },	{ 0.00f,	0.00f } },
-		// front
-		{ { -1.0f,	-1.0f,	+1.0f },	{ 0.00f,	0.00f } },
-		{ { -1.0f,	+1.0f,	+1.0f },	{ 0.00f,	1.00f } },
-		{ { +1.0f,	+1.0f,	+1.0f },	{ 1.00f,	1.00f } },
-		{ { +1.0f,	+1.0f,	+1.0f },	{ 1.00f,	1.00f } },
-		{ { +1.0f,	-1.0f,	+1.0f },	{ 1.00f,	0.00f } },
-		{ { -1.0f,	-1.0f,	+1.0f },	{ 0.00f,	0.00f } },
-		// top
-		{ { -1.0f,	+1.0f,	-1.0f },	{ 0.00f,	0.00f } },
-		{ { +1.0f,	+1.0f,	-1.0f },	{ 1.00f,	0.00f } },
-		{ { +1.0f,	+1.0f,	+1.0f },	{ 1.00f,	1.00f } },
-		{ { +1.0f,	+1.0f,	+1.0f },	{ 1.00f,	1.00f } },
-		{ { -1.0f,	+1.0f,	+1.0f },	{ 0.00f,	1.00f } },
-		{ { -1.0f,	+1.0f,	-1.0f },	{ 0.00f,	0.00f } },
-		// bottom
-		{ { -1.0f,	-1.0f,	-1.0f },	{ 0.00f,	0.00f } },
-		{ { -1.0f,	-1.0f,	+1.0f },	{ 0.00f,	1.00f } },
-		{ { +1.0f,	-1.0f,	-1.0f },	{ 1.00f,	0.00f } },
-		{ { +1.0f,	-1.0f,	-1.0f },	{ 1.00f,	0.00f } },
-		{ { -1.0f,	-1.0f,	+1.0f },	{ 0.00f,	1.00f } },
-		{ { +1.0f,	-1.0f,	+1.0f },	{ 1.00f,	1.00f } },
+		{ { -0.5f,	-0.5f,	-0.5f },	{ 0.0f, 0.0f }, { +0.0f,	+0.0f,	-1.0f} },
+		{ { +0.5f,	-0.5f,	-0.5f },	{ 1.0f, 0.0f }, { +0.0f,	+0.0f,	-1.0f} },
+		{ { +0.5f,	+0.5f,	-0.5f },	{ 1.0f, 1.0f }, { +0.0f,	+0.0f,	-1.0f} },
+		{ { +0.5f,	+0.5f,	-0.5f },	{ 1.0f, 1.0f }, { +0.0f,	+0.0f,	-1.0f} },
+		{ { -0.5f,	+0.5f,	-0.5f },	{ 0.0f, 1.0f },	{ +0.0f,	+0.0f,	-1.0f} },
+		{ { -0.5f,	-0.5f,	-0.5f },	{ 0.0f, 0.0f }, { +0.0f,	+0.0f,	-1.0f} },
+
+		{ { -0.5f,	-0.5f,	+0.5f },	{ 0.0f,	0.0f },	{ +0.0f,	+0.0f,	+1.0f } },
+		{ { +0.5f,	-0.5f,	+0.5f },	{ 1.0f,	0.0f },	{ +0.0f,	+0.0f,	+1.0f } },
+		{ { +0.5f,	+0.5f,	+0.5f },	{ 1.0f,	1.0f },	{ +0.0f,	+0.0f,	+1.0f } },
+		{ { +0.5f,	+0.5f,	+0.5f },	{ 1.0f,	1.0f },	{ +0.0f,	+0.0f,	+1.0f } },
+		{ { -0.5f,	+0.5f,	+0.5f },	{ 0.0f,	1.0f },	{ +0.0f,	+0.0f,	+1.0f } },
+		{ { -0.5f,	-0.5f,	+0.5f },	{ 0.0f,	0.0f },	{ +0.0f,	+0.0f,	+1.0f } },
+	
+		{ { -0.5f,	+0.5f,	+0.5f },	{ 1.0f,	0.0f }, { -1.0f,	+0.0f,	+0.0f } },
+		{ { -0.5f,	+0.5f,	-0.5f },	{ 1.0f,	1.0f }, { -1.0f,	+0.0f,	+0.0f } },
+		{ { -0.5f,	-0.5f,	-0.5f },	{ 0.0f,	1.0f }, { -1.0f,	+0.0f,	+0.0f } },
+		{ { -0.5f,	-0.5f,	-0.5f },	{ 0.0f,	1.0f }, { -1.0f,	+0.0f,	+0.0f } },
+		{ { -0.5f,	-0.5f,	+0.5f },	{ 0.0f,	0.0f }, { -1.0f,	+0.0f,	+0.0f } },
+		{ { -0.5f,	+0.5f,	+0.5f },	{ 1.0f,	0.0f }, { -1.0f,	+0.0f,	+0.0f } },
+		
+		{ { +0.5f,	+0.5f,	+0.5f },	{ 1.0f,	0.0f }, { +1.0f,	+0.0f,	+0.0f } },
+		{ { +0.5f,	+0.5f,	-0.5f },	{ 1.0f,	1.0f }, { +1.0f,	+0.0f,	+0.0f } },
+		{ { +0.5f,	-0.5f,	-0.5f },	{ 0.0f,	1.0f }, { +1.0f,	+0.0f,	+0.0f } },
+		{ { +0.5f,	-0.5f,	-0.5f },	{ 0.0f,	1.0f }, { +1.0f,	+0.0f,	+0.0f } },
+		{ { +0.5f,	-0.5f,	+0.5f },	{ 0.0f,	0.0f }, { +1.0f,	+0.0f,	+0.0f } },
+		{ { +0.5f,	+0.5f,	+0.5f },	{ 1.0f,	0.0f }, { +1.0f,	+0.0f,	+0.0f } },
+									
+		{ { -0.5f, -0.5f,	-0.5f },	{ 0.0f,	1.0f }, { +0.0f,	-1.0f,	+0.0f } },
+		{ { +0.5f, -0.5f,	-0.5f },	{ 1.0f,	1.0f },	{ +0.0f,	-1.0f,	+0.0f } },
+		{ { +0.5f, -0.5f,	+0.5f },	{ 1.0f,	0.0f }, { +0.0f,	-1.0f,	+0.0f } },
+		{ { +0.5f, -0.5f,	+0.5f },	{ 1.0f,	0.0f }, { +0.0f,	-1.0f,	+0.0f } },
+		{ { -0.5f, -0.5f,	+0.5f },	{ 0.0f,	0.0f }, { +0.0f,	-1.0f,	+0.0f } },
+		{ { -0.5f, -0.5f,	-0.5f },	{ 0.0f,	1.0f }, { +0.0f,	-1.0f,	+0.0f } },
+											
+		{ { -0.5f,	+0.5f,	-0.5f },	{ 0.0f,	1.0f }, { +0.0f,	+1.0f,	+0.0f } },
+		{ { +0.5f,	+0.5f,	-0.5f },	{ 1.0f,	1.0f }, { +0.0f,	+1.0f,	+0.0f } },
+		{ { +0.5f,	+0.5f,	+0.5f },	{ 1.0f,	0.0f }, { +0.0f,	+1.0f,	+0.0f } },
+		{ { +0.5f,	+0.5f,	+0.5f },	{ 1.0f,	0.0f }, { +0.0f,	+1.0f,	+0.0f } },
+		{ { -0.5f,	+0.5f,	+0.5f },	{ 0.0f,	0.0f }, { +0.0f,	+1.0f,	+0.0f } },
+		{ { -0.5f,	+0.5f,	-0.5f },	{ 0.0f,	1.0f }, { +0.0f,	+1.0f,	+0.0f } }
 	};
 }
 namespace NW
 {
-	gfx_state::gfx_state(core_engine& rEngine) :
-		a_engine_state(rEngine),
+	gfx_core_state::gfx_core_state(core_engine& rEngine) :
+		a_core_state(rEngine),
 		m_gfx(m_core->get_graphics()),
 		m_camera_lad() { }
-	gfx_state::~gfx_state() { }
+	gfx_core_state::~gfx_core_state() { }
 	// --==<core_methods>==--
-	bool gfx_state::init() {
+	bool gfx_core_state::init() {
 		m_gfx = m_core->get_graphics();
 		
-		//if (!init_skybox()) { return false; }
-		if (!init_scene()) { return false; }
+		mem_ref<buf_shd> sbuf;
+		m_gfx->new_rsc<buf_shd>(sbuf);
+		sbuf->add_elem(shd_elem("unf_model", DT_MAT4_FLOAT32, 0, 1), 1);
+		sbuf->add_elem(shd_elem("unf_view", DT_MAT4_FLOAT32, 1, 1), 1);
+		sbuf->add_elem(shd_elem("unf_proj", DT_MAT4_FLOAT32, 2, 1), 1);
+		if (!sbuf->remake()) { return false; }
 		
+		mem_ref<state_sampler> smp;
+		m_gfx->new_rsc<state_sampler>(smp);
+
+		if (!init_skybox()) { return false; }
+		if (!init_scene()) { return false; }
+
 		return true;
 	}
-	void gfx_state::quit()
+	void gfx_core_state::quit()
 	{
 	}
-	void gfx_state::update()
+	void gfx_core_state::update()
 	{
-		m_camera_lad.update(*m_core->get_keyboard() , *m_core->get_cursor(), *m_core->get_timer());
-		//draw_skybox();
+		{
+			m_camera_lad.update(*m_core->get_keyboard(), *m_core->get_mouse(), *m_core->get_timer());
+			
+			f32 time_curr = m_core->get_timer()->get_curr();
+			buf_16f16f16f unf_tform = {
+				m4f(1.0f),
+				m_camera_lad.get_view_mat(),
+				m_camera_lad.get_proj_mat(),
+			};
+			
+			m_gfx->get_rsc<buf_shd>(0).get_ref<buf_shd>()->set_data(sizeof(buf_16f16f16f), &unf_tform);
+		}
+		
+		draw_skybox();
 		draw_scene();
 	}
 
-	void gfx_state::event_proc(cursor_event& evt)
+	void gfx_core_state::event_proc(mouse_event& evt)
 	{
 	}
-	void gfx_state::event_proc(keyboard_event& evt)
+	void gfx_core_state::event_proc(keyboard_event& evt)
 	{
 		switch (evt.type) {
 		case EVT_KEYBOARD_RELEASED:
 			switch (evt.code) {
-			case KC_1: m_gfx->set_primitive(GPT_TRIANGLES); break;
-			//case KC_2: m_gfx->set_primitive(GPT_TRIANGLE_STRIP); break;
-			//case KC_3: m_gfx->set_primitive(GPT_TRIANGLE_FAN); break;
-			//case KC_4: m_gfx->set_primitive(GPT_LINE_STRIP); break;
-			//case KC_5: m_gfx->set_primitive(GPT_LINES); break;
-			//case KC_6: m_gfx->set_primitive(GPT_LINE_LOOP); break;
-			//case KC_7: m_gfx->set_primitive(GPT_POINTS); break;
+			case KBC_1: m_gfx->set_primitive(GPT_TRIANGLES); break;
+			//case KBC_2: m_gfx->set_primitive(GPT_TRIANGLE_STRIP); break;
+			//case KBC_3: m_gfx->set_primitive(GPT_TRIANGLE_FAN); break;
+			//case KBC_4: m_gfx->set_primitive(GPT_LINE_STRIP); break;
+			//case KBC_5: m_gfx->set_primitive(GPT_LINES); break;
+			//case KBC_6: m_gfx->set_primitive(GPT_LINE_LOOP); break;
+			//case KBC_7: m_gfx->set_primitive(GPT_POINTS); break;
 			}
 			break;
 		default: break;
 		}
 	}
-	void gfx_state::event_proc(window_event& evt) {
+	void gfx_core_state::event_proc(window_event& evt) {
 		switch (evt.type) {
 		case EVT_WINDOW_RESIZE: {
 			v4si viewport = m_gfx->get_configs().viewport;
@@ -179,107 +208,133 @@ namespace NW
 	// --==</core_methods>==--
 
 	// --==<implementation_methods>==--
-	inline bool gfx_state::init_scene() {
+	inline bool gfx_core_state::init_skybox() {
+		mem_ref<drawable_vtx> drb;
+		m_gfx->new_rsc<drawable_vtx>(drb);
+		
+		mem_ref<buf_vtx> vbuf;
+		m_gfx->new_rsc<buf_vtx>(vbuf);
+		if (!vbuf->remake<vtx_3f>(std::size(vtx_cube_3f), &vtx_cube_3f[0])) { return false; }
+		drb->get_bufs().push_back(vbuf);
+
+		dstring str_buf;
+
+		mem_ref<a_shader> vshd;
+		m_gfx->new_rsc<a_shader, shader_vtx>(vshd, "shd_skybox_vtx");
+		if (!data_sys::load_file(R"(nw_gfx\src_glsl\skybox_3d_vtx.glsl)", str_buf)) { return false; }
+		if (!vshd->remake(&str_buf[0])) { return false; }
+		mem_ref<buf_shd> sbuf = m_gfx->get_rsc<buf_shd>(0);
+		vshd->add_buf(sbuf);
+
+		mem_ref<a_shader> pshd;
+		m_gfx->new_rsc<a_shader, shader_pxl>(pshd, "shd_skybox_pxl");
+		if (!data_sys::load_file(R"(nw_gfx\src_glsl\skybox_3d_pxl.glsl)", str_buf)) { return false; }
+		if (!pshd->remake(&str_buf[0])) { return false; }
+
+		mem_ref<a_texture> txr;
+		m_gfx->new_rsc<a_texture, texture_cube>(txr, "txr_sb_0");
+		image_bmp img(R"(img_sb_0)");
+		if (!data_sys::load_file(R"(data\image\nw_sb.bmp)", img)) { return false; }
+		if (!txr->remake(img)) { return false; }
+
+		m_gfx->new_rsc<gfx_material>(drb->get_gmt(), "gmt");
+		drb->get_gmt()->add_shader(vshd);
+		drb->get_gmt()->add_shader(pshd);
+		drb->get_gmt()->add_texture(txr);
+		if (!drb->get_gmt()->remake()) { return false; }
+
+		mem_ref<input_layout> layout;
+		m_gfx->new_rsc<input_layout>(layout);
+		layout->add_elem(shd_elem("atb_vtx_crd", DT_VEC3_FLOAT32, 0, 1), 1);
+		if (!layout->remake(vshd)) { return false; }
+		drb->add_rsc(layout);
+
+		mem_ref<state_depth> dpt;
+		m_gfx->new_rsc<state_depth>(dpt);
+		dpt->set_enabled(false);
+		drb->add_rsc(dpt);
+
+		mem_ref<state_sampler> smp;
+		m_gfx->new_rsc<state_sampler>(smp);
+		smp->set_filter(TXFL_LINEAR);
+		drb->add_rsc(smp);
+
+		return true;
+	}
+	inline bool gfx_core_state::init_scene() {
 		mem_ref<drawable_vtx> drb;
 		m_gfx->new_rsc<drawable_vtx>(drb);
 
 		mem_ref<buf_vtx> vbuf;
 		m_gfx->new_rsc<buf_vtx>(vbuf);
-		vbuf->remake<vtx_3f2f3f>(std::size(vtx_cube_3f2f3f), &vtx_cube_3f2f3f[0]);
+		if (!vbuf->remake<vtx_3f2f3f>(std::size(vtx_cube_3f2f3f), &vtx_cube_3f2f3f[0])) { return false; }
 		drb->get_bufs().push_back(vbuf);
 
 		dstring str_buf = "default";
 
 		mem_ref<a_shader> vshd;
-		m_gfx->new_rsc<a_shader, shader_vtx>(vshd, "shd_default_3d_vtx");
-		if (!data_sys::load_file(R"(F:\projects\native_world\nw_gfx\src_glsl\default_3d_vtx.glsl)", str_buf)) { return false; }
+		m_gfx->new_rsc<a_shader, shader_vtx>(vshd, "shd_default_vtx");
+		if (!data_sys::load_file(R"(nw_gfx\src_glsl\default_3d_vtx.glsl)", str_buf)) { return false; }
 		if (!vshd->remake(&str_buf[0])) { return false; }
+		mem_ref<buf_shd> sbuf = m_gfx->get_rsc<buf_shd>(0);
+		vshd->add_buf(sbuf);
 
 		mem_ref<a_shader> pshd;
-		m_gfx->new_rsc<a_shader, shader_pxl>(pshd, "shd_default_3d_pxl");
-		if (!data_sys::load_file(R"(F:\projects\native_world\nw_gfx\src_glsl\default_3d_pxl.glsl)", str_buf)) { return false; }
+		m_gfx->new_rsc<a_shader, shader_pxl>(pshd, "shd_default_pxl");
+		if (!data_sys::load_file(R"(nw_gfx\src_glsl\default_3d_pxl.glsl)", str_buf)) { return false; }
 		if (!pshd->remake(&str_buf[0])) { return false; }
-
+		
 		mem_ref<a_texture> txr;
-		m_gfx->new_rsc<a_texture, texture_2d>(txr, "txr_nw_logo");
+		m_gfx->new_rsc<a_texture, texture_2d>(txr, "txr_0");
 		image_bmp img("nw_logo.bmp");
-		if (!data_sys::load_file(R"(F:\projects\native_world\data\image\nw_logo.bmp)", img)) { return false; }
+		if (!data_sys::load_file(R"(data\image\txr_wood_0.bmp)", img)) { return false; }
 		if (!txr->remake(img)) { return false; }
 		
-		mem_ref<gfx_material> gmtl;
-		m_gfx->new_rsc<gfx_material>(gmtl, "gmt_default_3d");
-		gmtl->add_shader(vshd);
-		gmtl->add_shader(pshd);
-		gmtl->add_texture(txr);
-		if (!gmtl->remake()) { return false; }
-		drb->add_rsc(gmtl);
-		
-		mem_ref<sampler> smp;
-		m_gfx->new_rsc<sampler>(smp);
+		m_gfx->new_rsc<gfx_material>(drb->get_gmt(), "gmt_default");
+		drb->get_gmt()->add_shader(vshd);
+		drb->get_gmt()->add_shader(pshd);
+		drb->get_gmt()->add_texture(txr);
+		if (!drb->get_gmt()->remake()) { return false; }
+
+		mem_ref<input_layout> layout;
+		m_gfx->new_rsc<input_layout>(layout);
+		layout->add_elem(shd_elem("atb_vtx_crd", DT_VEC3_FLOAT32, 0, 1), 1);
+		layout->add_elem(shd_elem("atb_txr_crd", DT_VEC2_FLOAT32, 1, 1), 1);
+		layout->add_elem(shd_elem("atb_nrm_crd", DT_VEC3_FLOAT32, 2, 1), 1);
+		if (!layout->remake(vshd)) { return false; }
+		drb->add_rsc(layout);
+
+		mem_ref<state_depth> dpt;
+		m_gfx->new_rsc<state_depth>(dpt);
+		dpt->set_enabled(true);
+		drb->add_rsc(dpt);
+
+		mem_ref<state_sampler> smp;
+		m_gfx->new_rsc<state_sampler>(smp);
+		smp->set_filter(TXFL_NEAREST);
 		drb->add_rsc(smp);
 
 		return true;
 	}
-	inline bool gfx_state::init_skybox() {
-		mem_ref<drawable_vtx> drb;
-		m_gfx->new_rsc<drawable_vtx>(drb);
-
-		drb->get_bufs().push_back(mem_ref<buf_vtx>());
-		m_gfx->new_rsc<buf_vtx>(drb->get_bufs().back());
-
-		mem_ref<gfx_material> gmtl;
-		m_gfx->new_rsc<gfx_material>(gmtl, "gmt");
-		drb->add_rsc(gmtl);
-
-		mem_ref<a_texture> txr;
-		image_bmp img("nw_skybox.bmp");
-		if (!data_sys::load_file(R"(F:\projects\native_world\data\image\nw_sb.bmp)", img)) { return false; }
-		m_gfx->new_rsc<a_texture, texture_cube>(txr, "txr_skybox_0");
-		if (!txr->remake(img)) { return false; }
-
-		return true;
-	}
-	inline void gfx_state::draw_scene() {
-		static buf_16f16f16f unf_tform;
-
-		unf_tform.view = m_camera_lad.get_view_mat();
-		unf_tform.proj = m_camera_lad.get_proj_mat();
-
-		auto& shd_rsc = m_gfx->get_rsc<shader_vtx>(0);
-		auto* vshd = shd_rsc.get_ref<shader_vtx>();
-		auto& sbuf = vshd->get_buffer(0);
-		sbuf->on_draw();
-		sbuf->set_data(sizeof(buf_16f16f16f), &unf_tform);
-
-		auto& drb = m_gfx->get_rsc<drawable_vtx>(0);
+	inline void gfx_core_state::draw_skybox() {
+		auto& drb = m_gfx->get_rsc<drawable>(0);
 		drb->on_draw();
 	}
-	inline void gfx_state::draw_skybox() {
-		static buf_16f16f unf_tform;
-
-		unf_tform.view = m4f( m3f(m_camera_lad.get_view_mat()) );
-		unf_tform.proj = m_camera_lad.get_proj_mat();
-
-		auto& shd = m_gfx->get_rsc<shader_vtx>(1);
-		auto* vshd = shd.get_ref<shader_vtx>();
-		auto& sbuf = vshd->get_buffer(1);
-		sbuf->on_draw();
-		sbuf->set_data(sizeof(buf_16f16f), &unf_tform);
-
-		auto& drb = m_gfx->get_rsc<drawable_vtx>(1);
+	inline void gfx_core_state::draw_scene() {
+		auto& drb = m_gfx->get_rsc<drawable>(1);
 		drb->on_draw();
 	}
 	// --==</implementation_methods>==--
 }
 namespace NW
 {
-	gui_state::gui_state(core_engine& rEngine) :
-		a_engine_state(rEngine),
+	gui_core_state::gui_core_state(core_engine& rEngine) :
+		a_core_state(rEngine),
 		m_enable_dockspace(true), m_full_screen_persist(true),
 		m_gui_context(nullptr), m_gui_io(nullptr), m_gui_style(nullptr) { }
-	gui_state::~gui_state() { }
+	gui_core_state::~gui_core_state() { }
 	// --==<core_methods>==--
-	bit gui_state::init()
+	bit gui_core_state::init()
 	{
 		if (!NW::imgui_init(m_core->get_window()->get_native(), m_core->get_graphics()->get_device(), m_core->get_graphics()->get_context())) { return false; }
 		
@@ -295,11 +350,16 @@ namespace NW
 
 		return true;
 	}
-	void gui_state::quit()
+	void gui_core_state::quit()
 	{
 		NW::imgui_quit();
 	}
-	void gui_state::update() {
+	void gui_core_state::update() {
+		imgui_begin_frame();
+		GUI::Begin("window");
+		GUI::End();
+		imgui_end_frame();
+#if false
 		imgui_begin_frame();
 
 		if (GUI::BeginMenuBar()) {
@@ -316,10 +376,11 @@ namespace NW
 		}
 
 		imgui_end_frame();
+#endif
 	}
 
-	void gui_state::event_proc(cursor_event& rmEvt) { }
-	void gui_state::event_proc(keyboard_event& rkEvt) { }
-	void gui_state::event_proc(window_event& rwEvt) { }
+	void gui_core_state::event_proc(mouse_event& rmEvt) { }
+	void gui_core_state::event_proc(keyboard_event& rkEvt) { }
+	void gui_core_state::event_proc(window_event& rwEvt) { }
 	// --==</core_methods>==--
 }

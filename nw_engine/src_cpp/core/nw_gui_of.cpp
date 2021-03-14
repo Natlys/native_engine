@@ -49,7 +49,9 @@ namespace NW
 namespace NW
 {
 	// --==<gui_of_data_sys>==--
-	gui_of_data_sys::gui_of_data_sys() { strcpy(m_curr_dir, data_sys::get_directory()); }
+	gui_of_data_sys::gui_of_data_sys()
+	{
+	}
 	gui_of_data_sys::~gui_of_data_sys() { }
 	// --core_methods
 	void gui_of_data_sys::on_draw() {

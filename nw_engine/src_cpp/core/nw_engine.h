@@ -11,8 +11,13 @@ namespace NW
 	class NW_API core_engine : public a_mem_user
 	{
 	public:
-		using state = a_engine_state;
+		using state = a_core_state;
 		using states = darray<state*>;
+		using window = mem_ref<core_window>;
+		using graphics = mem_ref<gfx_engine>;
+		using keyboard = keyboard_state;
+		using mouse = mouse_state;
+		using timer = time_state;
 	public:
 		core_engine(cstring name = "nw_engine");
 		core_engine(const core_engine& copy) = delete;
@@ -20,12 +25,12 @@ namespace NW
 		// --getters
 		inline cstring get_name()			{ return &m_name[0]; }
 		inline thread* get_run_thread()		{ return &m_thr_run; }
-		inline core_window* get_window()	{ return m_wnd; }
-		inline gfx_engine* get_graphics()	{ return m_gfx; }
+		inline window& get_window()			{ return m_wnd; }
+		inline graphics& get_graphics()		{ return m_gfx; }
 		inline state* get_state(ui32 idx)	{ return m_states[idx]; }
-		inline const keyboard_state* get_keyboard() const	{ return &m_kbd; }
-		inline const cursor_state* get_cursor() const		{ return &m_crs; }
-		inline const time_state* get_timer() const			{ return &m_timer; }
+		inline const mouse* get_mouse() const		{ return m_wnd->get_mouse(); }
+		inline const keyboard* get_keyboard() const	{ return m_wnd->get_keyboard(); }
+		inline const timer* get_timer() const		{ return &m_timer; }
 		// --setters
 		void add_state(state& state);
 		void rmv_state(ui8 idx);
@@ -47,11 +52,9 @@ namespace NW
 		cstring m_name;
 		thread m_thr_run;
 		bit m_is_running;
-		mem_ref<core_window> m_wnd;
-		mem_ref<gfx_engine> m_gfx;
+		window m_wnd;
+		graphics m_gfx;
 		states m_states;
-		keyboard_state m_kbd;
-		cursor_state m_crs;
 		time_state m_timer;
 	};
 }
