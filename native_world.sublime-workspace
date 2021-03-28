@@ -52,16 +52,16 @@
 	],
 	"file_history":
 	[
+		"/F/projects/native_world/premake5.lua",
 		"/F/projects/native_world/.gitmodules",
-		"/F/projects/native_world/.git/config",
 		"/F/projects/native_world/.git/COMMIT_EDITMSG",
+		"/F/projects/native_world/.git/config",
 		"/F/projects/native_world/nw_app/premake5.lua",
 		"/F/projects/native_world/nw_lua/src_cpp/nwlua_code.c",
 		"/F/projects/native_world/nw_cmd/premake5.lua",
 		"/F/projects/native_world/nw_gfx/premake5.lua",
 		"/F/projects/native_world/nw_gui/premake5.lua",
 		"/F/projects/native_world/nw_lib/premake5.lua",
-		"/F/projects/native_world/premake5.lua",
 		"/F/projects/native_world/nw_lua/premake5.lua",
 		"/F/projects/native_world/nw_lib/src_cpp/std/nwlib_std_rand.cpp",
 		"/F/projects/native_world/nw_lib/src_cpp/std/nwlib_std_id.h",

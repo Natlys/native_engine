@@ -1,15 +1,15 @@
 [submodule "nw_lib"]
 	path = nw_lib
 	url = https://github.com/Natlys/nw_lib
-[submodule "nw_lua"]
-	path = nw_lua
-	url = https://github.com/Natlys/nw_lua
-[submodule "nw_cmd"]
-	path = nw_cmd
-	url = https://github.com/Natlys/nw_cmd
 [submodule "nw_gfx"]
 	path = nw_gfx
 	url = https://github.com/Natlys/nw_gfx
 [submodule "nw_gui"]
 	path = nw_gui
 	url = https://github.com/Natlys/nw_gui
+[submodule "nw_lua"]
+	path = nw_lua
+	url = https://github.com/Natlys/nw_lua
+[submodule "nw_cmd"]
+	path = nw_cmd
+	url = https://github.com/Natlys/nw_cmd
