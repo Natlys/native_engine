@@ -1,15 +1,27 @@
-[submodule "nw_lib"]
-	path = nw_lib
-	url = https://github.com/Natlys/nw_lib
-[submodule "nw_gfx"]
-	path = nw_gfx
-	url = https://github.com/Natlys/nw_gfx
-[submodule "nw_gui"]
-	path = nw_gui
-	url = https://github.com/Natlys/nw_gui
-[submodule "nw_lua"]
-	path = nw_lua
-	url = https://github.com/Natlys/nw_lua
-[submodule "nw_cmd"]
-	path = nw_cmd
-	url = https://github.com/Natlys/nw_cmd
+[submodule "nc_lib"]
+	path = nc_lib
+	url = https://github.com/Natlys/nc_lib
+[submodule "nc_gfx"]
+	path = nc_gfx
+	url = https://github.com/Natlys/nc_gfx
+[submodule "nc_gui"]
+	path = nc_gui
+	url = https://github.com/Natlys/nc_gui
+[submodule "nc_lua"]
+	path = nc_lua
+	url = https://github.com/Natlys/nc_lua
+[submodule "nc_cmd"]
+	path = nc_cmd
+	url = https://github.com/Natlys/nc_cmd
+[submodule "nc_iop"]
+	path = nc_iop
+	url = https://github.com/Natlys/nc_iop
+[submodule "nc_num"]
+	path = nc_num
+	url = https://github.com/Natlys/nc_num
+[submodule "nc_mem"]
+	path = nc_mem
+	url = https://github.com/Natlys/nc_mem
+[submodule "nc_cfg"]
+	path = nc_cfg
+	url = https://github.com/Natlys/nc_cfg
