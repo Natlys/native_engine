@@ -1,0 +1,310 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"co",
+				"cstdio\tstandard header"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Arithmetic"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/work/native_code"
+	],
+	"file_history":
+	[
+		"/F/work/code_scholar/info/combinatorics.txt",
+		"/F/projects/code_scholar/var_1/sln.py",
+		"/F/projects/native_code/.git/COMMIT_EDITMSG",
+		"/F/projects/native_code/.git/modules/nc_gfx/COMMIT_EDITMSG",
+		"/F/projects/native_code/.git/modules/nc_cmd/COMMIT_EDITMSG",
+		"/F/projects/native_code/nc_cmd/premake5.lua",
+		"/F/projects/native_code/.git/modules/nc_lua/COMMIT_EDITMSG",
+		"/F/projects/native_code/.git/modules/nc_gui/COMMIT_EDITMSG",
+		"/F/projects/native_code/.git/modules/nc_lib/COMMIT_EDITMSG",
+		"/F/projects/code_scholar/.git/COMMIT_EDITMSG",
+		"/F/projects/code_scholar/py/pm_lib.py",
+		"/F/projects/code_scholar/py/pm_exam.py",
+		"/E/storage/soul_poetry.txt",
+		"/E/storage/poetry_0",
+		"/F/projects/native_code/nc_app/premake5.lua",
+		"/F/projects/native_code/nc_gfx/premake5.lua",
+		"/F/projects/native_code/nc_gui/premake5.lua",
+		"/F/projects/native_code/nc_lua/premake5.lua",
+		"/F/projects/native_code/nc_lib/premake5.lua",
+		"/F/projects/native_code/premake5.lua",
+		"/F/projects/code_scholar/py/pm_entry.py",
+		"/E/storage/skyrim_files/meshes/dlc01falmerbook.nif",
+		"/F/dev/nif_skope/shaders/ob_normalmap.frag",
+		"/F/dev/nif_skope/shaders/ob_parallax_vcol_ad.prog",
+		"/F/dev/nif_skope/shaders/ob_normalmap_vcol_e.prog",
+		"/F/dev/nif_skope/shaders/ob_glowmap.vert",
+		"/F/projects/native_code/scripts/gen_premake5.bat",
+		"/F/projects/native_code/.git/TAG_EDITMSG",
+		"/F/projects/native_code/.git/modules/nc_gfx/TAG_EDITMSG",
+		"/F/projects/native_code/.git/modules/nc_cmd/TAG_EDITMSG",
+		"/F/projects/native_code/.git/modules/nc_lib/TAG_EDITMSG",
+		"/F/projects/native_code/.git/modules/nc_lua/TAG_EDITMSG",
+		"/F/projects/native_code/.gitmodules",
+		"/F/projects/native_code/.git/config",
+		"/F/projects/native_code/nc_lua/src_cpp/nwlua_code.c",
+		"/F/projects/native_code/nc_lib/src_cpp/std/nwlib_std_rand.cpp",
+		"/F/projects/native_code/nc_lib/src_cpp/std/nwlib_std_id.h",
+		"/F/projects/native_code/nc_lib/src_cpp/std/nwlib_std_time.cpp",
+		"/F/projects/native_code/nc_lib/src_cpp/std/nwlib_std_rand.h",
+		"/F/projects/native_code/nc_lib/src_cpp/std/nwlib_std_time.h",
+		"/F/projects/code_scholar/scripts/lua_entry.bat",
+		"/F/projects/native_code/nc_lib/src_cpp/std/nwlib_std.h",
+		"/F/projects/native_code/nc_lib/src_cpp/std/nwlib_stde.cpp",
+		"/F/projects/native_code/nc_lib/src_cpp/std/nwlib_stdd.cpp",
+		"/F/projects/native_code/nc_gui/src_cpp/nwgui.hpp",
+		"/F/projects/native_code/nc_eng/src_cpp/lua_core.hpp",
+		"/F/projects/native_code/nc_eng/premake5.lua",
+		"/F/projects/native_code/nc_gui/src_cpp/lib/nwgui_lib.h",
+		"/F/dev/mcvs/VC/Tools/MSVC/14.28.29333/include/filesystem",
+		"/D/art/isometry_2d/canvas_2.aseprite",
+		"/D/dev/native_code/premake5.lua",
+		"/D/dev/native_code/nc_gfx/premake5.lua",
+		"/D/dev/native_code/nc_gfx/src_glsl/pxl_3d_default.glsl",
+		"/D/dev/native_code/nc_gfx/src_glsl/vtx_2d_default.glsl",
+		"/D/dev/native_code/nc_gfx/src_glsl/vtx_3d_default.glsl",
+		"/D/dev/native_code/nc_gfx/src_glsl/pxl_2d_default.glsl",
+		"/D/dev/native_code/nc_gfx/src_glsl/vtx_2d_batch.glsl",
+		"/D/dev/native_code/nc_gfx/src_glsl/shd_2d_batch.glsl",
+		"/D/dev/native_code/.git/TAG_EDITMSG",
+		"/D/dev/native_code/.git/COMMIT_EDITMSG",
+		"/D/dev/native_code/nc_lib/.git/COMMIT_EDITMSG",
+		"/D/dev/native_code/.git/modules/nc_gfx/TAG_EDITMSG",
+		"/D/dev/native_code/.git/modules/nc_gfx/COMMIT_EDITMSG",
+		"/D/dev/native_code/nc_gfx/.gitignore",
+		"/D/dev/native_code/nc_gfx/.git",
+		"/D/dev/native_code/data/shader/dx_test_0.shd",
+		"/D/dev/native_code/data/resource.h",
+		"/D/dev/native_code/data/resource.rc",
+		"/D/dev/native_code/nc_engine/premake5.lua",
+		"/F/dev/lua_jit/projects/math_19.lua",
+		"/F/dev/lua_jit/projects/math_19.txt",
+		"/D/dev/native_code/nc_gfx/src_hlsl/shd_0_vtx.cso",
+		"/D/dev/native_code/nc_lib/.git/TAG_EDITMSG",
+		"/D/dev/native_code/nc_cmd/premake5.lua",
+		"/D/dev/native_code/nc_lib/premake5.lua",
+		"/F/dev/lua_jit/projects/exam_16.lua",
+		"/D/dev/native_code/.gitmessage",
+		"/D/dev/native_code/nc_cmd/src_cpp/cmd_def.hpp",
+		"/D/dev/native_code/nc_cmd/.git/TAG_EDITMSG",
+		"/D/dev/native_code/nc_cmd/.git/COMMIT_EDITMSG",
+		"/D/dev/native_code/nc_lib/src_cpp/core/nwl_code_res.h",
+		"/D/dev/native_code/nc_lib/src_cpp/core/nwl_code_res.cpp",
+		"/D/dev/native_code/nc_lib/.gitignore",
+		"/D/dev/nc_lib/src_cpp/core/nwl_code_res.h",
+		"/D/dev/nc_lib/src_cpp/core/nwl_code_res.cpp",
+		"/F/dev/lua_jit/launch_script.bat",
+		"/D/dev/native_code/scripts/gen_project_premake5.bat",
+		"/D/dev/native_code/nc_engine/src_cpp/core/nc_gui_of.h",
+		"/D/dev/native_code/nc_engine/src_cpp/core/nc_engine_states.h",
+		"/D/dev/native_code/nc_game/src_cpp/nwg_engine_states.h",
+		"/D/dev/native_code/nc_game/src_cpp/nc_engine_states.cpp",
+		"/D/dev/native_code/nc_engine/src_cpp/core/nc_engine_states.cpp",
+		"/D/dev/native_code/nc_game/premake5.lua",
+		"/D/dev/native_code/ext/lualib/premake5.lua",
+		"/D/dev/native_code/ext/imgui/premake5.lua",
+		"/F/dev/lua_jit/projects/exam_17.lua",
+		"/D/dev/code_schoolar/exam_17.lua",
+		"/D/dev/code_schoolar/learn_script.cpp",
+		"/D/dev/native_code/nc_engine/src_hlsl/shd_0_pxl.cso",
+		"/D/dev/native_code/nc_cmd/README.md",
+		"/D/dev/native_code/.gitignore",
+		"/D/dev/native_engine/nc_lib/src_cpp/nwl_core.hpp",
+		"/D/dev/native_engine/nc_lib/premake5.lua",
+		"/D/dev/native_engine/premake5.lua",
+		"/D/dev/native_engine/scripts/gen_project_premake5.bat",
+		"/D/dev/native_engine/nc_lib/.gitignore",
+		"/D/dev/native_engine/.gitmodules",
+		"/D/dev/native_engine/nc_lib/src_cpp/native_code_library.hpp",
+		"/D/dev/native_engine/README.md",
+		"/D/dev/native_engine/nc_cmd/premake5.lua",
+		"/D/dev/native_engine/nc_engine/premake5.lua",
+		"/D/dev/native_engine/nc_game/premake5.lua",
+		"/D/dev/native_engine/.git/COMMIT_EDITMSG",
+		"/D/dev/native_engine/.git/config",
+		"/D/dev/native_engine/ext/glfw/premake5.lua",
+		"/D/dev/native_engine/nc_engine/src_cpp/lua/nc_lua_engine.cpp",
+		"/D/dev/native_engine/nc_engine/src_cpp/lua/nc_lua_core.h",
+		"/D/dev/native_engine/nc_engine/src_cpp/lua_decl.hpp",
+		"/D/dev/native_code/nc_engine/src_cpp/nc_def.hpp",
+		"/D/dev/native_code/nc_engine/src_cpp/nc_core.hpp",
+		"/D/dev/native_engine/nc_engine/src_cpp/lua/nc_lua_core.cpp",
+		"/D/dev/native_engine/ext/imgui/premake5.lua",
+		"/D/dev/native_engine/nc_engine/src_cpp/core/nc_window.cpp",
+		"/D/dev/native_engine/nc_library/.git",
+		"/D/dev/native_code/nc_lib/.git",
+		"/D/dev/native_code/.gitmodules",
+		"/D/dev/native_code/README.md",
+		"/D/dev/native_code/nc_core/premake5.lua"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			";\n",
+			"--==<"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/C++/C++ Single File.sublime-build",
+	"project": "native_code.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"F:\\work\\code_scholar\\code_scholar.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
