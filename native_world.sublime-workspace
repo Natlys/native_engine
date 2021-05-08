@@ -48,11 +48,11 @@
 	},
 	"expanded_folders":
 	[
-		"/F/projects/native_world",
-		"/F/projects/native_world/nw_lib"
+		"/F/work/native_world"
 	],
 	"file_history":
 	[
+		"/F/work/code_scholar/info/combinatorics.txt",
 		"/F/projects/code_scholar/var_1/sln.py",
 		"/F/projects/native_world/.git/COMMIT_EDITMSG",
 		"/F/projects/native_world/.git/modules/nw_gfx/COMMIT_EDITMSG",
@@ -179,8 +179,7 @@
 		"/D/dev/native_world/nw_lib/.git",
 		"/D/dev/native_world/.gitmodules",
 		"/D/dev/native_world/README.md",
-		"/D/dev/native_world/nw_core/premake5.lua",
-		"/D/dev/native_world/nw_core/gfx/premake5.lua"
+		"/D/dev/native_world/nw_core/premake5.lua"
 	],
 	"find":
 	{
@@ -281,7 +280,7 @@
 		[
 			[
 				"",
-				"F:\\projects\\code_scholar\\code_scholar.sublime-workspace"
+				"F:\\work\\code_scholar\\code_scholar.sublime-workspace"
 			]
 		],
 		"width": 380.0

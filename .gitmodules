@@ -13,3 +13,15 @@
 [submodule "nw_cmd"]
 	path = nw_cmd
 	url = https://github.com/Natlys/nw_cmd
+[submodule "nw_iop"]
+	path = nw_iop
+	url = https://github.com/Natlys/nw_iop
+[submodule "nw_num"]
+	path = nw_num
+	url = https://github.com/Natlys/nw_num
+[submodule "nw_mem"]
+	path = nw_mem
+	url = https://github.com/Natlys/nw_mem
+[submodule "nw_cfg"]
+	path = nw_cfg
+	url = https://github.com/Natlys/nw_cfg

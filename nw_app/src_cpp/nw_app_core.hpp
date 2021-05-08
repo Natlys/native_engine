@@ -7,7 +7,7 @@
 namespace NW
 {
 	class NW_API app_engine;
-	class NW_API app_wnd;
-	class NW_API app_wnd_core;
+	class NW_API app_wnd_t;
+	class NW_API app_wnd_core_t;
 }
 #endif // NW_APP_CORE_HPP

@@ -1,0 +1,6 @@
+F:\dev\gcc\bin\make.exe all -f "F:/work/native_world/makefile" --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'f:/work/native_world'
+make: Leaving directory 'f:/work/native_world'
+ 
+make: *** No rule to make target 'all'.
+ 
