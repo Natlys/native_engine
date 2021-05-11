@@ -25,3 +25,9 @@
 [submodule "nc_cfg"]
 	path = nc_cfg
 	url = https://github.com/Natlys/nc_cfg
+[submodule "nc_aud"]
+	path = nc_aud
+	url = https://github.com/Natlys/nc_aud
+[submodule "nc_app"]
+	path = nc_app
+	url = https://github.com/Natlys/nc_app
