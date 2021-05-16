@@ -73,7 +73,9 @@
 			"typeinfo": "cpp",
 			"nc_lib_flow.h": "c",
 			"nc_lib.h": "c",
-			"nc_lib_stack.h": "c"
+			"nc_lib_stack.h": "c",
+			"nc_lib_core.h": "c",
+			"nc_lib_array.h": "c"
 		}
 	}
 }
