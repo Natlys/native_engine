@@ -4,7 +4,7 @@ workspace("native_code")
 	configurations{"work", "test", "play"}
 	characterset("ascii")
 	floatingpoint("default")
-	removeflags("excludefrombuild")
+	removeflags{ "excludefrombuild" }
 	--tools--
 	cpp_comp_name = "F:\\dev\\gcc\\bin\\g++.exe"
 	cxx_comp_name = "F:\\dev\\gcc\\bin\\gcc.exe"
@@ -34,6 +34,7 @@ workspace("native_code")
 	architecture ("x64")
 	platforms("win64")
 	--language--
+	--language("c++")
 	language("c")
 	toolset("ncc")
 	--filters--
@@ -58,11 +59,13 @@ workspace("native_code")
 		runtime("release")
 	----language_filters----
 	filter("language:c++")
+		--general--
 		--entrypoint("entry")
 		cppdialect("c++17")
 		rtti("off")
+		buildoptions{ "-fpermissive" }
 		--source--
-		files{"%{prj.name}/src_cpp/**.cpp","%{prj.name}/src_cpp/**.hpp"}
+		files{"%{prj.name}/src_cpp/**.cpp", "%{prj.name}/src_cpp/**.hpp"}
 		includedirs {"%{prj.name}/src_cpp/"}
 		--binary--
 		targetdir ("%{prj.name}/bin_cpp/")
@@ -73,7 +76,7 @@ workspace("native_code")
 		cdialect("c99")
 		clr("off")
 		--source--
-		files{"%{prj.name}/src_cxx/**.c","%{prj.name}/src_cxx/**.h"}
+		files{"%{prj.name}/src_cxx/**.c", "%{prj.name}/src_cxx/**.h"}
 		includedirs {"%{prj.name}/src_cxx/"}
 		--binary--
 		targetdir ("%{prj.name}/bin_cxx/")
@@ -94,7 +97,7 @@ workspace("native_code")
 		pchheader("nc_pch.hpp")
 		pchsource("src_cpp/nc_pch.cpp")
 		flags{"c++14"}
-	----cs_file_filters----
+		----cs_file_filters----
 	filter("files:**.cs")
 	----lua_file_filters----
 	filter("files:**.lua")

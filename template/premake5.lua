@@ -3,10 +3,7 @@ project("nc_prj")
 	--general--
 	--kind("consoleapp")
 	kind("staticlib")
-	--kind("sharedlib")--
-	--language--
-	language("c")
-	toolset("gcc")
+	--kind("sharedlib")
 	--libraries--
 	links{"nc_cfg", "nc_lib"}
 	libdirs{"../nc_cfg", "../nc_lib"}
@@ -20,7 +17,7 @@ project("nc_prj")
 	----language_filters----
 	filter("language:c++")
 		--standard--
-		toolset("gcc")
+		--toolset("gcc")
 		premake.tools.gcc.cxx = "g++.exe"
 		cppdialect("c++17")
 		clr("off")
@@ -33,10 +30,11 @@ project("nc_prj")
 		objdir ("bin_cpp/")
 	filter("language:c")
 		--standard--
-		toolset("gcc")
+		--toolset("gcc")
 		premake.tools.gcc.cc = "gcc.exe"
 		cdialect("c99")
 		clr("off")
+		--source--
 		files{"src_cxx/**.c","src_cxx/**.h"}
 		includedirs {"src_cxx/"}
 		--binary--

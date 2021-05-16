@@ -19,9 +19,6 @@
 [submodule "nc_num"]
 	path = nc_num
 	url = https://github.com/Natlys/nc_num
-[submodule "nc_mem"]
-	path = nc_mem
-	url = https://github.com/Natlys/nc_mem
 [submodule "nc_cfg"]
 	path = nc_cfg
 	url = https://github.com/Natlys/nc_cfg

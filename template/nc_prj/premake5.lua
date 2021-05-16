@@ -3,10 +3,7 @@ project("nc_prj")
 	--general--
 	--kind("consoleapp")
 	kind("staticlib")
-	--kind("sharedlib")--
-	--language--
-	language("c")
-	toolset("gcc")
+	--kind("sharedlib")
 	--libraries--
 	links{"nc_cfg", "nc_lib"}
 	libdirs{"../nc_cfg", "../nc_lib"}
