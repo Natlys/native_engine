@@ -1,12 +1,12 @@
---==<native_code_project/>==--
-project("nc_prj")
+--==<native_code_memory/>==--
+project("nc_mem")
 	--general--
 	--kind("consoleapp")
 	kind("staticlib")
 	--kind("sharedlib")
 	--libraries--
-	links{"nc_cfg", "nc_lib"}
-	libdirs{"../nc_cfg", "../nc_lib"}
+	links{ "nc_lib" }
+	libdirs{ "../nc_lib/" }
 	--filters--
 	----platform_filters----
 	filter("platforms:win64")
@@ -40,4 +40,4 @@ project("nc_prj")
 		targetdir ("bin_cxx/")
 		objdir ("bin_cxx/")
 	----file_filters----
---==</native_code_project>==--
+--==</native_code_console>==--

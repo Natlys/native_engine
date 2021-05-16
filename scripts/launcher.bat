@@ -3,10 +3,11 @@
 @set root="../"
 @set path=%1\\bin_cxx
 @set exec=%1.exe
-@set make="scripts/build_makefile.bat"
+@set make="make"
 @rem ==work==
 @pushd %root%
-call %path%\\%exec%
+@call make
+@call %path%\\%exec%
 @popd
 @rem ==quit==
 @rem ==/native_code_launcher==

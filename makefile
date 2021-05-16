@@ -57,37 +57,37 @@ ifneq (,$(nc_lib_config))
 	@${MAKE} --no-print-directory -C nc_lib -f Makefile config=$(nc_lib_config)
 endif
 
-nc_num: nc_cfg nc_lib
+nc_num: nc_lib
 ifneq (,$(nc_num_config))
 	@echo "==== Building nc_num ($(nc_num_config)) ===="
 	@${MAKE} --no-print-directory -C nc_num -f Makefile config=$(nc_num_config)
 endif
 
-nc_mem: nc_cfg nc_lib
+nc_mem: nc_lib
 ifneq (,$(nc_mem_config))
 	@echo "==== Building nc_mem ($(nc_mem_config)) ===="
 	@${MAKE} --no-print-directory -C nc_mem -f Makefile config=$(nc_mem_config)
 endif
 
-nc_aud: nc_cfg nc_lib nc_mem
+nc_aud: nc_lib
 ifneq (,$(nc_aud_config))
 	@echo "==== Building nc_aud ($(nc_aud_config)) ===="
 	@${MAKE} --no-print-directory -C nc_aud -f Makefile config=$(nc_aud_config)
 endif
 
-nc_iop: nc_cfg nc_lib nc_num
+nc_iop: nc_lib nc_mem
 ifneq (,$(nc_iop_config))
 	@echo "==== Building nc_iop ($(nc_iop_config)) ===="
 	@${MAKE} --no-print-directory -C nc_iop -f Makefile config=$(nc_iop_config)
 endif
 
-nc_cmd: nc_cfg nc_lib nc_num nc_mem
+nc_cmd: nc_mem nc_iop
 ifneq (,$(nc_cmd_config))
 	@echo "==== Building nc_cmd ($(nc_cmd_config)) ===="
 	@${MAKE} --no-print-directory -C nc_cmd -f Makefile config=$(nc_cmd_config)
 endif
 
-nc_app: nc_cmd nc_aud nc_iop nc_mem nc_num nc_lib nc_cfg
+nc_app: nc_cmd nc_aud
 ifneq (,$(nc_app_config))
 	@echo "==== Building nc_app ($(nc_app_config)) ===="
 	@${MAKE} --no-print-directory -C nc_app -f Makefile config=$(nc_app_config)

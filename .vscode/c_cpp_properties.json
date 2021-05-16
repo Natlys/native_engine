@@ -6,13 +6,14 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [
-                "NC_DEBUG"
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
             ],
             "compilerPath": "F:\\dev\\gcc\\bin\\gcc.exe",
-            "cStandard": "gnu99",
+            "cStandard": "gnu17",
             "cppStandard": "gnu++14",
-            "intelliSenseMode": "gcc-x64",
-            "configurationProvider": "ms-vscode.makefile-tools"
+            "intelliSenseMode": "windows-gcc-x64"
         }
     ],
     "version": 4
