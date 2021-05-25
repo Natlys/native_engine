@@ -34,7 +34,7 @@ project("nc_prj")
 		premake.tools.gcc.cc = "gcc.exe"
 		cdialect("c99")
 		clr("off")
-		files{"src_cxx/**.c","src_cxx/**.h"}
+		files{"src_cxx/**.cxx","src_cxx/**.hxx"}
 		includedirs {"src_cxx/"}
 		--binary--
 		targetdir ("bin_cxx/")

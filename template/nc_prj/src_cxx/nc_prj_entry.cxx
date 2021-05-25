@@ -1,5 +1,5 @@
-#include "nc_prj_pch.h"
-#include "nc_prj.h"
+#include "nc_prj_pch.hxx"
+#include "nc_prj.hxx"
 
 #if (defined NC_BUILD)
 #   if (NC_BUILD & NC_BUILD_EXE)
@@ -9,6 +9,6 @@ int main(int arg_num, const char* arg_str[])
     system("pause");
     return 0;
 }
-#   endif   // NC_BUILD_EXE //
-#endif  // NC_BUILD //
-// end_of_file //
+#   endif   /* NC_BUILD_EXE */
+#endif  /* NC_BUILD */
+/* end_of_file */

@@ -15,8 +15,8 @@ ifeq ($(config),work_win64)
   TARGETDIR = bin_cxx
   TARGET = $(TARGETDIR)/nc_iop.lib
   OBJDIR = bin_cxx/win64/work
-  DEFINES += -DDEBUG -DNC_DEBUG
-  INCLUDES += -I%(prj.name)/src_cxx
+  DEFINES += -DDEBUG -DNC_WORK
+  INCLUDES += -I%{prj.name}/src_cxx
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -ffloat-store -g -std=c99
@@ -42,8 +42,8 @@ ifeq ($(config),test_win64)
   TARGETDIR = bin_cxx
   TARGET = $(TARGETDIR)/nc_iop.lib
   OBJDIR = bin_cxx/win64/test
-  DEFINES += -DNDEBUG -DNC_NDEBUG
-  INCLUDES += -I%(prj.name)/src_cxx
+  DEFINES += -DNDEBUG -DNC_GAME
+  INCLUDES += -I%{prj.name}/src_cxx
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -ffast-math -O2 -std=c99
@@ -69,8 +69,8 @@ ifeq ($(config),play_win64)
   TARGETDIR = bin_cxx
   TARGET = $(TARGETDIR)/nc_iop.lib
   OBJDIR = bin_cxx/win64/play
-  DEFINES += -DNDEBUG -DNC_NDEBUG
-  INCLUDES += -I%(prj.name)/src_cxx
+  DEFINES += -DNDEBUG -DNC_GAME
+  INCLUDES += -I%{prj.name}/src_cxx
   FORCE_INCLUDE +=
   ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -ffast-math -O3 -std=c99

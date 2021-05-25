@@ -6,20 +6,19 @@
         "**/.svn": false,
         "**/CVS": false
     },
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
     "editor.cursorStyle": "line",
     "editor.cursorWidth": 2,
     "editor.cursorBlinking": "blink",
     "editor.semanticHighlighting.enabled": true,
     "editor.autoClosingDelete": "always",
-    "editor.codeActionsOnSave": null,
     "editor.columnSelection": false,
     "editor.hideCursorInOverviewRuler": true,
     "editor.hover.delay": 150,
     "editor.tabSize": 4,
     "editor.renderControlCharacters": true,
     "editor.tabCompletion": "on",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
     "terminal.integrated.allowWorkspaceConfiguration": true,
     "terminal.integrated.profiles.windows": {
         "console": {

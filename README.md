@@ -1,6 +1,11 @@
-# native_code
---==native_code_workspace==--\n
-since 11.05.2021 this huge project becomes a united collction of
-all my nc_ libraries;
-this is a lot of labour and changes, it has a dirty history,
-an incredible amount of weird tricks and many other things i suddenly decided to do;
+# native_code #
+-> the concept is free creation of own code which\n
+depends on its creator as much as possible;\n
+-> native_code consists of many other parts but there is\n
+always one main part - console applciation with "main" entrypoint;\n
+-> here are assemblied different types of programming libraries:\n
+graphics, gui, scripts, standard facilities,\n
+memory management, mathematics, physics, geometry and more;\n
+-> the workspace can be built via premake that\n
+generates makefiles and visual studio solutions;\n
+-> each of projects depends on the core nc_cfg;\n

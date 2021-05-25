@@ -9,9 +9,10 @@
 powershell $files=get-childitem %iput% -recurse
 powershell foreach ($file in $files) {
     if ($file.name -ne $file.name.tolower()) {
-        rename -newname { $_.name.tolower() }
+        rename-item -newname { $_.name.tolower() }
     }
 }
+powershell get-childitem %iput% | foreach { rename-item $_ $_.name.replace(%iput%, %oput%) }
 @popd
 @rem ==quit==
 @pause

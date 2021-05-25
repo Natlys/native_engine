@@ -7,5 +7,5 @@
 #   include <sstream>
 #   include <iostream>
 #   include <fstream>
-// end_of_file //
+/* end_of_file */
 #endif  // NC_PRJ_PCH_HPP //
