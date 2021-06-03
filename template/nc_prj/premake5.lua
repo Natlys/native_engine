@@ -1,4 +1,4 @@
---==<native_code_project/>==--
+--==<nati_code_project/>==--
 project("nc_prj")
 	--general--
 	--kind("consoleapp")
@@ -40,4 +40,4 @@ project("nc_prj")
 		targetdir ("bin_cxx/")
 		objdir ("bin_cxx/")
 	----file_filters----
---==</native_code_project>==--
+--==</nati_code_project>==--

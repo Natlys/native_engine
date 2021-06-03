@@ -1,7 +1,7 @@
 //#include "../nc_pch.hxx"
 #include "nc_type.hxx"
 #if (defined NC_API)
-// ctor_dtor //
+/* ctor_dtor */
 v1bit_t nc_type_ctor(nc_type_t* ref) {
     return NC_TRUTH;
 }
@@ -10,7 +10,7 @@ v1bit_t nc_type_dtor(nc_type_t* ref) {
 }
 /* getters */
 /* setters */
-/* predicates */
+/* vetters */
 /* commands */
 v1bit_t nc_type_init(nc_type_t* ref){
     return NC_TRUTH;

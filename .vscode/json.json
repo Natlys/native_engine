@@ -2,9 +2,6 @@
 	"cmd_init" : {
 		"prefix" : "init",
 		"body" : [
-			"v1bit_t init() {",
-			"    return NC_TRUTH;",
-			"}"
 		],
 		"description" : "predefine init method;"
 	}

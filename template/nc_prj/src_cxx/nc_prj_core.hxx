@@ -4,7 +4,7 @@
 #   define NC_BUILD NC_BUILD_EXE
 /* includes */
 #   include "nc_prj_pch.hxx"
-// linkage //
+/* linkage */
 #   if (defined NC_API)
 #       undef NC_API
 #   endif   /* NC_API */
@@ -19,4 +19,4 @@
 #       define NC_API NC_DLL_IMPORT
 #   endif	/* NC_BUILD */
 /* end_of_file */
-#endif  // NC_PRJ_CORE_H //
+#endif  /* NC_PRJ_CORE_H */

@@ -1,0 +1,151 @@
+{
+	"folders": [
+		{
+			"name": "nati_code",
+			"path": "./"
+		},
+	],
+	"extensions": {
+		"recommendations": [
+		],
+		"unwantedRecommendations": [
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [],
+		"compounds": [],
+		"inputs": [],
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{ /* default */
+				"label": "build",
+				"type": "shell",
+				"command": "echo hello",
+				"problemMatcher": [ "$gcc" ]
+			}
+		]
+	},
+	"settings": {
+		/* editor */
+		"editor.cursorStyle": "line",
+		"editor.cursorWidth": 2,
+		"editor.cursorBlinking": "blink",
+		"editor.semanticHighlighting.enabled": true,
+		"editor.autoClosingDelete": "always",
+		"editor.columnSelection": false,
+		"editor.hideCursorInOverviewRuler": true,
+		"editor.hover.delay": 150,
+		"editor.tabSize": 4,
+		"editor.renderControlCharacters": true,
+		"editor.tabCompletion": "on",
+		/* explorer */
+		"explorer.confirmDelete": false,
+		"explorer.confirmDragAndDrop": false,
+		/* terminal */
+		"terminal.explorerKind": "integrated",
+		"terminal.integrated.enableBell": true,
+		"terminal.integrated.bellDuration": 1000,
+		/** profile **/
+		"terminal.integrated.profiles.osx": {
+			"bash": {
+				"path": "bash",
+				"icon": "terminal-bash"
+			},
+			"zsh": {
+				"path": "zsh"
+			},
+			"fish": {
+				"path": "fish"
+			},
+			"tmux": {
+				"path": "tmux",
+				"icon": "terminal-tmux"
+			},
+			"pwsh": {
+				"path": "pwsh",
+				"icon": "terminal-powershell"
+			}
+		},
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "bash"
+			},
+			"zsh": {
+				"path": "zsh"
+			},
+			"fish": {
+				"path": "fish"
+			},
+			"tmux": {
+				"path": "tmux",
+				"icon": "terminal-tmux"
+			},
+			"pwsh": {
+				"path": "pwsh",
+				"icon": "terminal-powershell"
+			}
+		},
+		"terminal.integrated.profiles.windows": {
+			"Command Prompt": null,
+			"PowerShell": null,
+			"Git Bash": null,
+			"console": {
+				"overrideName": true,
+				"args": [],
+				"icon": "terminal-cmd",
+				"path": "${env:windir}\\System32\\cmd.exe"
+			},
+		},
+		/** shell **/
+		"terminal.integrated.automationShell.osx": "terminal",
+		"terminal.integrated.automationShell.linux": "xterm",
+		"terminal.integrated.automationShell.windows": "cmd",
+		/** view **/
+		"terminal.integrated.cursorStyle": "underline",
+		"terminal.integrated.cursorBlinking": true,
+		"terminal.integrated.cursorWidth": 2,
+		"terminal.integrated.fontFamily": "consolas",
+		/* workbench */
+		"workbench.colorTheme": "Default Dark+",
+		"workbench.editor.limit.enabled": true,
+		"workbench.editor.limit.value": 7,
+		"workbench.editor.tabSizing": "fit",
+		"workbench.editor.closeOnFileDelete": true,
+		"workbench.editor.enablePreview": true,
+		/* files */
+		"files.associations": {
+			/* source_code */
+			"*.c": "c",
+			"*.h": "c",
+			"*.cxx": "c",
+			"*.hxx": "c",
+			"*.cpp": "cpp",
+			"*.hpp": "cpp",
+			"*.lua": "lua",
+			/* binary_code */
+			"*.o": "c",
+			"*.obj": "cpp",
+			"*.luac": "lua",
+			/* storage */
+			"*.txt": "plaintext",
+			"*.json": "jsonc",
+			/* building */
+			"*.prem": "lua",
+			"*.make": "makefile",
+			/* version_control */
+			"*.git*": "git",
+		},
+		/* files */
+		"files.exclude": {
+			/* version_control */
+			"**/.DS_Store": false,
+			"**/.git": false,
+			"**/.hg": false,
+			"**/.svn": false,
+			"**/CVS": false
+		}
+	}
+}

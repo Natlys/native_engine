@@ -1,19 +1,19 @@
 {
+    "env": {
+    },
     "configurations": [
         {
-            "name": "Win32",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "compilerPath": "F:\\dev\\gcc\\bin\\gcc.exe",
-            "cStandard": "gnu17",
-            "cppStandard": "gnu++14",
-            "intelliSenseMode": "windows-gcc-x64"
+            "name": "work",
+            /* coding */
+            "browse": { },
+            "intelliSenseMode": "windows-gcc-x64",
+            /* language */
+            "cStandard": "gnu99",
+            "cppStandard": "c++17",
+            /* compillation */
+            "compilerPath": "f:/cdev/gnu/bin/gcc.exe",
+            "includePath": [ ],
+            "defines": [ ]
         }
     ],
     "version": 4

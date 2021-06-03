@@ -1,4 +1,4 @@
-@rem ==native_code_generator==
+@rem ==nati_code_generator==
 @rem ==init==
 @set root="../"
 @set make="make"
@@ -7,5 +7,5 @@
 call %make%
 @popd
 @rem ==quit==
-@rem ==/native_code_generator==
+@rem ==/nati_code_generator==
 @pause

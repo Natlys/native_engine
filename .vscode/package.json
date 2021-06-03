@@ -1,0 +1,26 @@
+{
+    /* info */
+    "name": "nati_code",
+    "displayName": "nati_code",
+    "description": "environment setup for game engine development",
+    "categories": ["Other"],
+    "version": "0.0.0",
+    /* devs */
+    "author": {
+        "name": "nikodim_cheer",
+        "url": "https://github.com/nikocheer"
+    },
+    "publisher": "nikodim_cheer",
+    /* refs */
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nikocheer/nati_code"
+    },
+    /* view */
+    "icon": "../data/image/nati_code_16x16.bmp",
+    "galleryBanner": { "color": "0x00008800", "theme": "dark" },
+    /* work */
+    "engines": { "vscode": "^1.22.0" },
+    "workspaces": ["nati_code"],
+    "main": "./bin/native_flow"
+}

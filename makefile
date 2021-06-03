@@ -9,51 +9,19 @@ ifndef verbose
 endif
 
 ifeq ($(config),work_win64)
-  nc_app_config = work_win64
-  nc_aud_config = work_win64
   nc_cfg_config = work_win64
   nc_cmd_config = work_win64
-  nc_ecs_config = work_win64
-  nc_gfx_config = work_win64
-  nc_gui_config = work_win64
-  nc_iop_config = work_win64
-  nc_lua_config = work_win64
-  nc_lib_config = work_win64
-  nc_mem_config = work_win64
-  nc_num_config = work_win64
 endif
 ifeq ($(config),game_win64)
-  nc_app_config = game_win64
-  nc_aud_config = game_win64
   nc_cfg_config = game_win64
   nc_cmd_config = game_win64
-  nc_ecs_config = game_win64
-  nc_gfx_config = game_win64
-  nc_gui_config = game_win64
-  nc_iop_config = game_win64
-  nc_lua_config = game_win64
-  nc_lib_config = game_win64
-  nc_mem_config = game_win64
-  nc_num_config = game_win64
 endif
 
-PROJECTS := nc_app nc_aud nc_cfg nc_cmd nc_ecs nc_gfx nc_gui nc_iop nc_lua nc_lib nc_mem nc_num
+PROJECTS := nc_cfg nc_cmd
 
 .PHONY: all clean help $(PROJECTS) 
 
 all: $(PROJECTS)
-
-nc_app: nc_cfg nc_lib nc_mem nc_iop nc_lua
-ifneq (,$(nc_app_config))
-	@echo "==== Building nc_app ($(nc_app_config)) ===="
-	@${MAKE} --no-print-directory -C nc_app -f Makefile config=$(nc_app_config)
-endif
-
-nc_aud: nc_cfg nc_lib nc_mem nc_iop
-ifneq (,$(nc_aud_config))
-	@echo "==== Building nc_aud ($(nc_aud_config)) ===="
-	@${MAKE} --no-print-directory -C nc_aud -f Makefile config=$(nc_aud_config)
-endif
 
 nc_cfg:
 ifneq (,$(nc_cfg_config))
@@ -61,73 +29,15 @@ ifneq (,$(nc_cfg_config))
 	@${MAKE} --no-print-directory -C nc_cfg -f Makefile config=$(nc_cfg_config)
 endif
 
-nc_cmd: nc_cfg nc_lib nc_mem nc_iop
+nc_cmd: nc_cfg
 ifneq (,$(nc_cmd_config))
 	@echo "==== Building nc_cmd ($(nc_cmd_config)) ===="
 	@${MAKE} --no-print-directory -C nc_cmd -f Makefile config=$(nc_cmd_config)
 endif
 
-nc_ecs: nc_cfg nc_lib nc_mem nc_iop
-ifneq (,$(nc_ecs_config))
-	@echo "==== Building nc_ecs ($(nc_ecs_config)) ===="
-	@${MAKE} --no-print-directory -C nc_ecs -f Makefile config=$(nc_ecs_config)
-endif
-
-nc_gfx: nc_cfg nc_lib nc_mem nc_iop
-ifneq (,$(nc_gfx_config))
-	@echo "==== Building nc_gfx ($(nc_gfx_config)) ===="
-	@${MAKE} --no-print-directory -C nc_gfx -f Makefile config=$(nc_gfx_config)
-endif
-
-nc_gui: nc_cfg nc_lib nc_mem nc_iop
-ifneq (,$(nc_gui_config))
-	@echo "==== Building nc_gui ($(nc_gui_config)) ===="
-	@${MAKE} --no-print-directory -C nc_gui -f Makefile config=$(nc_gui_config)
-endif
-
-nc_iop: nc_cfg
-ifneq (,$(nc_iop_config))
-	@echo "==== Building nc_iop ($(nc_iop_config)) ===="
-	@${MAKE} --no-print-directory -C nc_iop -f Makefile config=$(nc_iop_config)
-endif
-
-nc_lua: nc_cfg
-ifneq (,$(nc_lua_config))
-	@echo "==== Building nc_lua ($(nc_lua_config)) ===="
-	@${MAKE} --no-print-directory -C nc_lua -f Makefile config=$(nc_lua_config)
-endif
-
-nc_lib: nc_cfg
-ifneq (,$(nc_lib_config))
-	@echo "==== Building nc_lib ($(nc_lib_config)) ===="
-	@${MAKE} --no-print-directory -C nc_lib -f Makefile config=$(nc_lib_config)
-endif
-
-nc_mem: nc_cfg
-ifneq (,$(nc_mem_config))
-	@echo "==== Building nc_mem ($(nc_mem_config)) ===="
-	@${MAKE} --no-print-directory -C nc_mem -f Makefile config=$(nc_mem_config)
-endif
-
-nc_num: nc_cfg
-ifneq (,$(nc_num_config))
-	@echo "==== Building nc_num ($(nc_num_config)) ===="
-	@${MAKE} --no-print-directory -C nc_num -f Makefile config=$(nc_num_config)
-endif
-
 clean:
-	@${MAKE} --no-print-directory -C nc_app -f Makefile clean
-	@${MAKE} --no-print-directory -C nc_aud -f Makefile clean
 	@${MAKE} --no-print-directory -C nc_cfg -f Makefile clean
 	@${MAKE} --no-print-directory -C nc_cmd -f Makefile clean
-	@${MAKE} --no-print-directory -C nc_ecs -f Makefile clean
-	@${MAKE} --no-print-directory -C nc_gfx -f Makefile clean
-	@${MAKE} --no-print-directory -C nc_gui -f Makefile clean
-	@${MAKE} --no-print-directory -C nc_iop -f Makefile clean
-	@${MAKE} --no-print-directory -C nc_lua -f Makefile clean
-	@${MAKE} --no-print-directory -C nc_lib -f Makefile clean
-	@${MAKE} --no-print-directory -C nc_mem -f Makefile clean
-	@${MAKE} --no-print-directory -C nc_num -f Makefile clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -139,17 +49,7 @@ help:
 	@echo "TARGETS:"
 	@echo "   all (default)"
 	@echo "   clean"
-	@echo "   nc_app"
-	@echo "   nc_aud"
 	@echo "   nc_cfg"
 	@echo "   nc_cmd"
-	@echo "   nc_ecs"
-	@echo "   nc_gfx"
-	@echo "   nc_gui"
-	@echo "   nc_iop"
-	@echo "   nc_lua"
-	@echo "   nc_lib"
-	@echo "   nc_mem"
-	@echo "   nc_num"
 	@echo ""
 	@echo "For more information, see https://github.com/premake/premake-core/wiki"

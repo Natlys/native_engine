@@ -1,4 +1,4 @@
-@rem ==native_code_generator/==
+@rem ==nati_code_generator/==
 @rem ==init==
 @set root="../"
 @set make="../ext\premake\premake5.exe"
@@ -10,5 +10,5 @@ pushd %root%
 call %make% %comp%
 popd
 @rem ==quit==
-@rem ==/native_code_generator==
+@rem ==/nati_code_generator==
 @pause

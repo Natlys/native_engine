@@ -1,4 +1,4 @@
-@rem ==native_code_launcher/==
+@rem ==nati_code_launcher/==
 @rem ==init==
 @set root="../"
 @set path=nc_prj.exe\\bin_cxx
@@ -9,5 +9,5 @@
 call %path%\\%exec%
 @popd
 @rem ==quit==
-@rem ==/native_code_launcher==
+@rem ==/nati_code_launcher==
 @pause

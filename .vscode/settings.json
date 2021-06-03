@@ -1,58 +1,30 @@
 {
-    "files.exclude": {
-        "**/.DS_Store": false,
-        "**/.git": false,
-        "**/.hg": false,
-        "**/.svn": false,
-        "**/CVS": false
+    /* languages */
+    /** clanguage **/
+    "[c]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
     },
-    "editor.cursorStyle": "line",
-    "editor.cursorWidth": 2,
-    "editor.cursorBlinking": "blink",
-    "editor.semanticHighlighting.enabled": true,
-    "editor.autoClosingDelete": "always",
-    "editor.columnSelection": false,
-    "editor.hideCursorInOverviewRuler": true,
-    "editor.hover.delay": 150,
-    "editor.tabSize": 4,
-    "editor.renderControlCharacters": true,
-    "editor.tabCompletion": "on",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "terminal.integrated.allowWorkspaceConfiguration": true,
-    "terminal.integrated.profiles.windows": {
-        "console": {
-            "overrideName": true,
-            "args": [],
-            "icon": "terminal-cmd",
-            "source": "cmd.exe",
-            "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
-            ]
-        },
-        "power_shell": {
-            "overrideName": true,
-            "args": [],
-            "icon": "terminal-powershell",
-            "source": "PowerShell",
-            "path": [
-                "${env:windir}\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
-            ]
-        },
-        //"Command Prompt":null,
-        //"Power Shell":null,
-        //"Git Bash":null,
+    /** cplusplus **/
+    "[cpp]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
     },
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "terminal.integrated.automationShell.windows": "Command Prompt",
-    //"terminal.integrated.defaultProfile.windows": "console",
-    //"terminal.integrated.automationShell.windows": "console",
-    "terminal.integrated.cursorStyle": "underline",
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.cursorWidth": 2,
-    "terminal.integrated.fontFamily": "consolas",
-    "terminal.integrated.enableBell": true,
-    "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 7
+    /** lualangua **/
+    "[lua]": {
+    },
+    /** jsoncommt **/
+    "[jsonc]": {
+        "editor.quickSuggestions": {
+            "comments": false,
+            "strings": true,
+            "other": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    /** batchfile **/
+    "[bat]": {
+    },
 }
