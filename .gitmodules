@@ -1,36 +1,33 @@
 [submodule "nc_lib"]
 	path = nc_lib
-	url = https://github.com/Natlys/nc_lib
+	url = https://github.com/niko-cher/nc_lib
 [submodule "nc_gfx"]
 	path = nc_gfx
-	url = https://github.com/Natlys/nc_gfx
+	url = https://github.com/niko-cher/nc_gfx
 [submodule "nc_gui"]
 	path = nc_gui
-	url = https://github.com/Natlys/nc_gui
+	url = https://github.com/niko-cher/nc_gui
 [submodule "nc_lua"]
 	path = nc_lua
-	url = https://github.com/Natlys/nc_lua
+	url = https://github.com/niko-cher/nc_lua
 [submodule "nc_cmd"]
 	path = nc_cmd
-	url = https://github.com/Natlys/nc_cmd
+	url = https://github.com/niko-cher/nc_cmd
 [submodule "nc_ecs"]
 	path = nc_ecs
-	url = https://github.com/Natlys/nc_ecs
+	url = https://github.com/niko-cher/nc_ecs
 [submodule "nc_iop"]
 	path = nc_iop
-	url = https://github.com/Natlys/nc_iop
+	url = https://github.com/niko-cher/nc_iop
 [submodule "nc_num"]
 	path = nc_num
-	url = https://github.com/Natlys/nc_num
-[submodule "nc_cfg"]
-	path = nc_cfg
-	url = https://github.com/Natlys/nc_cfg
+	url = https://github.com/niko-cher/nc_num
 [submodule "nc_aud"]
 	path = nc_aud
-	url = https://github.com/Natlys/nc_aud
+	url = https://github.com/niko-cher/nc_aud
 [submodule "nc_app"]
 	path = nc_app
-	url = https://github.com/Natlys/nc_app
+	url = https://github.com/niko-cher/nc_app
 [submodule "nc_mem"]
 	path = nc_mem
-	url = https://github.com/Natlys/nc_mem
+	url = https://github.com/niko-cher/nc_mem

@@ -1,0 +1,382 @@
+f:\cdev\mak\bin\gmake.exe all -f "f:/work/nati_code/makefile" -C "f:/cdev/mak/bin" --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.82.90
+# Built for i686-pc-mingw32
+# Copyright (C) 1988-2012 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Jun 10 19:28:23 2021
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# makefile
+MAKEFLAGS = wRrqp
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+HOMEDRIVE = C:
+# automatic
+@F = $(notdir $@)
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# makefile
+CURDIR := f:/cdev/mak/bin
+# default
+SHELL := f:/cdev/git/usr/bin/sh.exe
+# environment
+WINDIR = C:\Windows
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{},"_languagePackSupport":true}
+# environment
+DCDEV = f:\cdev
+# makefile (from 'f:/work/nati_code/makefile', line 4)
+config = work_win64
+# makefile (from 'f:/work/nati_code/makefile', line 12)
+nc_lib_config = work_win64
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# makefile (from 'f:/work/nati_code/makefile', line 1)
+MAKEFILE_LIST :=  f:/work/nati_code/makefile
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = C:\Users\Asus\AppData\Roaming\Code\CachedData\054a9295330880ed74ceaedda236253b4f39a335
+# makefile (from 'f:/work/nati_code/makefile', line 14)
+nc_cmd_config = work_win64
+# environment
+TMP = C:\Users\Asus\appdata\local\temp
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'f:/work/nati_code/makefile', line 8)
+SILENT = @
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-f0e5085e-690f-432e-9401-4bc1fa03a967-sock
+# environment
+VSCODE_CWD = F:\work\native_world
+# environment
+PATH = C:\Windows\system32;C:\Windows;C:\Windows\system32\Wbem;C:\Windows\system32\WindowsPowerShell\v1.0\;C:\Windows\system32\OpenSSH\;f:\cdev\git\cmd;f:\cdev\git\usr\bin;f:\cdev\vsc;f:\cdev\vsc\bin;f:\cdev\mak\bin;f:\cdev\gcc\bin;f:\cdev\lua;f:\cdev\pyt;f:\draw\ase;f:\draw\vox;C:\Users\Asus\appdata\local\microsoft\windowsapps;f:\cdev\git\cmd;f:\cdev\git\usr\bin;f:\cdev\vsc;f:\cdev\vsc\bin;f:\cdev\mak\bin;f:\cdev\gcc\bin;f:\cdev\lua;f:\cdev\pyt;f:\draw\ase;f:\draw\vox;
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+USERPROFILE = C:\Users\Asus
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+DPROG = f:\prog
+# environment
+VSCODE_LOG_STACK = false
+# environment
+NUMBER_OF_PROCESSORS = 4
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver
+# automatic
+%F = $(notdir $%)
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_7292_VKRYLBNKVUVVEDRK
+# environment
+OS = Windows_NT
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+COMPUTERNAME = NIKODIM
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+DRIVERDATA = C:\windows\system32\drivers\driverdata
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERNAME = Asus
+# environment
+PUBLIC = C:\Users\Public
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# environment
+LOGONSERVER = \\NIKODIM
+# makefile (from 'f:/work/nati_code/makefile', line 15)
+nc_gfx_config = work_win64
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = NIKODIM
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# default
+MAKE_VERSION := 3.82.90
+# makefile
+.DEFAULT_GOAL := all
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+LOCALAPPDATA = C:\Users\Asus\AppData\Local
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules;
+# default
+MAKE_COMMAND := f:/cdev/mak/bin/gmake
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# environment
+DCURS = C:\Windows\cursors\tesv
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+PROCESSOR_IDENTIFIER = AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
+# environment
+DDRAW = f:\draw
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\0fa17afad6f8282a945944de898e061c-1.56.2-main-sock
+# environment
+HOMEPATH = \Users\Asus
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+MFLAGS = -wRrqp
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+SYSTEMROOT = C:\Windows
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# makefile (from 'f:/work/nati_code/makefile', line 13)
+nc_aud_config = work_win64
+# automatic
++F = $(notdir $+)
+# environment
+APPDATA = C:\Users\Asus\AppData\Roaming
+# environment
+TEMP = C:\Users\Asus\appdata\local\temp
+# environment
+COMSPEC = C:\Windows\system32\cmd.exe
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# environment
+DWORK = f:\work
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
+# environment
+PROCESSOR_REVISION = 0200
+# default
+.RECIPEPREFIX := 
+# makefile (from 'f:/work/nati_code/makefile', line 24)
+PROJECTS := nc_lib nc_aud nc_cmd nc_gfx
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 21
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+VSCODE_PID = 7292
+# environment
+USERDOMAIN_ROAMINGPROFILE = NIKODIM
+# variable set hash-table stats:
+# Load=101/1024=10%, Rehash=0, Collisions=12/135=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# C:\Windows\system32\WindowsPowerShell\v1.0\ (key C:/Windows/system32/WindowsPowerShell/v1.0/, mtime 1609429695): 31 files, no impossibilities.
+# . (key f:/cdev/mak/bin, mtime 1623248036): 13 files, no impossibilities.
+# f:\cdev\git\usr\bin (key f:/cdev/git/usr/bin, mtime 1622284563): 315 files, no impossibilities so far.
+# C:\Windows\system32\OpenSSH\: could not be stat'd.
+# f:\cdev\git\cmd (key f:/cdev/git/cmd, mtime 1615471882): 8 files, no impossibilities.
+# C:\Windows (key C:/Windows, mtime 1623189102): 105 files, no impossibilities.
+# C:\Windows\system32\Wbem (key C:/Windows/system32/Wbem, mtime 1623189104): 155 files, no impossibilities.
+# C:\Windows\system32 (key C:/Windows/system32, mtime 1623224758): 2948 files, no impossibilities.
+
+# 3575 files, no impossibilities in 8 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+nc_aud: nc_lib
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'f:/work/nati_code/makefile', line 38):
+	@echo "==== Building nc_aud ($(nc_aud_config)) ===="
+	@${MAKE} --no-print-directory -C nc_aud -f Makefile config=$(nc_aud_config)
+
+all: nc_lib nc_aud nc_cmd nc_gfx
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
+
+.PHONY: all clean help nc_lib nc_aud nc_cmd nc_gfx
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+nc_lib:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := nc_lib
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/15=13%
+#  recipe to execute (from 'f:/work/nati_code/makefile', line 32):
+	@echo "==== Building nc_lib ($(nc_lib_config)) ===="
+	@${MAKE} --no-print-directory -C nc_lib -f Makefile config=$(nc_lib_config)
+
+nc_cmd: nc_lib
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'f:/work/nati_code/makefile', line 44):
+	@echo "==== Building nc_cmd ($(nc_cmd_config)) ===="
+	@${MAKE} --no-print-directory -C nc_cmd -f Makefile config=$(nc_cmd_config)
+
+help:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'f:/work/nati_code/makefile', line 61):
+	@echo "Usage: make [config=name] [target]"
+	@echo ""
+	@echo "CONFIGURATIONS:"
+	@echo "  work_win64"
+	@echo "  game_win64"
+	@echo ""
+	@echo "TARGETS:"
+	@echo "   all (default)"
+	@echo "   clean"
+	@echo "   nc_lib"
+	@echo "   nc_aud"
+	@echo "   nc_cmd"
+	@echo "   nc_gfx"
+	@echo ""
+	@echo "For more information, see https://github.com/premake/premake-core/wiki"
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'f:/work/nati_code/makefile', line 55):
+	@${MAKE} --no-print-directory -C nc_lib -f Makefile clean
+	@${MAKE} --no-print-directory -C nc_aud -f Makefile clean
+	@${MAKE} --no-print-directory -C nc_cmd -f Makefile clean
+	@${MAKE} --no-print-directory -C nc_gfx -f Makefile clean
+
+nc_gfx: nc_lib
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'f:/work/nati_code/makefile', line 50):
+	@echo "==== Building nc_gfx ($(nc_gfx_config)) ===="
+	@${MAKE} --no-print-directory -C nc_gfx -f Makefile config=$(nc_gfx_config)
+
+# Not a target:
+f:/work/nati_code/makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-06-10 15:36:21
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=11/1024=1%, Rehash=0, Collisions=0/43=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 7 (4) / strings = 3561 / storage = 52674 B / avg = 14 B
+# current buf: size = 8174 B / used = 3710 B / count = 275 / avg = 13 B
+# other used: total = 44500 B / count = 3286 / avg = 13 B
+# other free: total = 80 B / max = 25 B / min = 1 B / avg = 13 B
+
+# strcache performance: lookups = 3621 / hit rate = 1%
+# hash-table stats:
+# Load=3561/8192=43%, Rehash=0, Collisions=1280/3621=35%
+# Finished Make data base on Thu Jun 10 19:28:23 2021
+
+ 
